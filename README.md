@@ -3,25 +3,34 @@
 Plain HTML/CSS/JS, no build step, no framework. Content lives in `data.js`;
 layout/rendering in `index.html` / `script.js` / `style.css`.
 
-## Before you publish — placeholders to fill in
+## Content status
 
-Search `data.js` for `[ADD:` to find every placeholder. Currently unresolved:
+Resolved (2026-09-03):
 
-- **CV download link** (`profile.links.cv`) — currently `#`. Point it at a hosted PDF
-  (e.g. commit a CV PDF into `assets/` and link to it, or link to a Drive/Dropbox file).
-- **Publication links** — all 4 entries in the `publications` array, and the matching
-  links inside individual `entries` (thesis tip-over paper, RoboCup book chapter,
-  both Ford papers) — currently `#`.
-- **Project media** — no screenshots, plots, or videos are included yet. Each entry's
-  `fullDesc` array has an `[ADD: ...]` line noting what kind of image would help.
-  To add one, drop the file in `assets/` and either reference it directly in the
-  `fullDesc` text or extend `script.js`'s modal renderer to support an image entry
-  (the reference site you shared does this with `{ img: '...', caption: '...' }`
-  objects mixed into `fullDesc` — same pattern would work here if you want it).
-- **Phone number** — deliberately left off the public page for privacy. Add it to
-  `profile` in `data.js` and wire it into the sidebar links if you want it public.
+- **CV download link** — `assets/CV.pdf`, a phone-redacted build of
+  `job-search/00_master-docs/CV_master.tex` (the `\cvphone` macro is stripped, so
+  the number is absent from the file, not just visually hidden). Rebuild the same
+  way if the master CV changes.
+- **Publication links** — real DOIs, cross-checked against ORCID
+  `0009-0008-9341-8161`, on all 4 `publications` entries and the matching per-project
+  links. ORCID also corrected two years (RoboCup chapter 2024, CAN-data journal 2022).
+- **Accuracy pass** — DFKI role labelled "Research Assistant"; ERC 2025 framed as
+  "contributed to qualification"; `SLAM (GTSAM, coursework)` skill chip qualified.
 
-Nothing else in `data.js` was invented — every project, date, and bullet is pulled
+Still open:
+
+- **Project media** — no screenshots, plots, or videos yet. Ravi to supply from the
+  thesis repo / DFKI storage / competition-team material. To add one, drop the file
+  in `assets/` and either reference it in the `fullDesc` text or extend `script.js`'s
+  modal renderer to support an image entry (e.g. `{ img: '...', caption: '...' }`
+  objects mixed into `fullDesc`).
+- **Phone number** — deliberately off the public page. Add to `profile` in `data.js`
+  and wire into the sidebar links only if you want it public.
+- **Site title** — `profile.title` uses the master-CV styling ("Robotics Application
+  Engineer | Autonomous Systems"). The job-search workspace uses "Robotics Software
+  Engineer | <focus>" in applications; change here if you want them aligned.
+
+Nothing in `data.js` was invented — every project, date, and bullet is pulled
 directly from `CV_master.tex` and the job-search workspace's `achievements.md`.
 
 ## Preview locally

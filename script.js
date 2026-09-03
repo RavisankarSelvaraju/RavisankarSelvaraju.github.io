@@ -41,11 +41,13 @@ function renderProfile() {
   const linkDefs = [
     { key: 'github', label: 'GitHub' },
     { key: 'linkedin', label: 'LinkedIn' },
+    { key: 'orcid', label: 'ORCID' },
     { key: 'email', label: 'Email' },
     { key: 'cv', label: 'Download CV', accent: true },
   ];
   linkDefs.forEach((d) => {
     const href = profile.links[d.key];
+    if (!href) return;
     const a = el('a', {
       class: d.accent ? 'link-btn link-btn-accent' : 'link-btn',
       text: d.label,
