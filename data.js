@@ -24,8 +24,8 @@ const profile = {
     {
       degree: 'M.Sc. Autonomous Systems',
       school: 'Hochschule Bonn-Rhein-Sieg (H-BRS), Germany',
-      period: 'Sept 2021 – Present',
-      detail: 'GPA 2.2',
+      period: 'Sept 2021 – Jul 2026',
+      detail: 'GPA 2.2, thesis submitted July 2026',
     },
     {
       degree: 'B.E. Mechatronics Engineering',
@@ -62,7 +62,7 @@ const entries = [
       'Designed a multi-sensor state-estimation system for a rimless-wheeled rover operating in GPS-denied, slip-prone, unstructured terrain, fusing IMU, wheel-encoder, and contact-based measurements through an Invariant Extended Kalman Filter (InEKF).',
       'Designed a Potential Contact Velocity (PCV) update model with adaptive slip filtering, to reject unreliable wheel-encoder measurements on loose terrain.',
       'Validated the approach on the Coyote 3 rover at RIC DFKI against VICON motion-capture ground truth in real-world experiments.',
-      'Status: thesis submitted, defense pending.',
+      'Status: thesis submitted July 2026.',
     ],
     tags: ['InEKF', 'Sensor Fusion', 'State Estimation', 'C++', 'Python', 'Real-World Validation'],
     links: [],
